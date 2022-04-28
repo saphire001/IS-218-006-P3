@@ -1,7 +1,5 @@
 
-def test_csv_upload(client, auth):
-    reg = auth.register()
-    log = auth.login()
+def test_csv_upload(client):
     csv = "tests/music.csv"
     csv_data = open(csv, "rb")
     data = {"file": (csv_data, "test_music.csv")}
