@@ -6,9 +6,9 @@ def test_csv_upload(client, auth):
     csv = "tests/music.csv"
     csv_data = open(csv, "rb")
     data = {"file": (csv_data, "music.csv")}
-    post = client.post("/songs", data=data)
+    post = client.post("/songs/upload", data=data)
 
     print(post.data)
 
     assert post.status_code == 302
-    assert post.headers["Location"] == "/songs_upload"
+    assert post.headers["Location"] == "/songs"
