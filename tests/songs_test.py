@@ -5,7 +5,7 @@ def test_csv_upload(client, auth):
     log = auth.login()
     csv = "tests/music.csv"
     csv_data = open(csv, "rb")
-    data = {"file": (csv_data, "test_music.csv")}
+    data = {"file": (csv_data, "music.csv")}
     post = client.post("/songs", data=data)
 
     print(post.data)
