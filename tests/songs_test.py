@@ -11,4 +11,4 @@ def test_csv_upload(client, auth):
     print(post.data)
 
     assert post.status_code == 302
-    assert post.headers["Location"] == "/songs_tables" 
+    assert post.headers["Location"] == "/songs_upload"
