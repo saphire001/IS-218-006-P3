@@ -1,6 +1,10 @@
 import logging
+import pytest
 
-from app import db
+from flask_login import login_user
+from flask.testing import FlaskClient
+
+from app import db, auth
 from app.db.models import User, Song
 from faker import Faker
 
@@ -41,6 +45,25 @@ def test_adding_user(application):
         assert db.session.query(User).count() == 0
         assert db.session.query(Song).count() == 0
 
+    def test_login(client):
+        with client:
+            user = User('keith@webizly.com', 'testtest', True)
+            db.session.add(user)
+            db.session.commit()
 
+            response = client.get("/login")
+            assert response.status_code == 200
 
+    def test_register(application):
+        print("IDK")
 
+    def test_login_dashboard(client):
+        with client:
+            response = client.get("/dashboard")
+            assert response.status_code == 302
+
+    def test_logout_dashboard(client):
+        db.session.query(User).count() == 0
+        with client:
+            response = client.get("/dashboard")
+            assert b"<h1>Redirecting...</h1>" in response.data
