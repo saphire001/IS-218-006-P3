@@ -1,10 +1,14 @@
 """This makes the test configuration setup"""
 # pylint: disable=redefined-outer-name
+import logging
 import os
 
 import pytest
 from app import create_app, User
 from app.db import db
+
+#this is a good tutorial I used to fix this code to do datbase testing.
+#https://xvrdm.github.io/2017/07/03/testing-flask-sqlalchemy-database-with-pytest/
 
 @pytest.fixture()
 def application():
@@ -44,33 +48,3 @@ def client(application):
 def runner(application):
     """This makes the task runner"""
     return application.test_cli_runner()
-
-class AuthActions:
-    def __init__(self, client):
-        self._client = client
-
-    def register(self, email="tester1@email.com", password="passtest"):
-        return self._client.post(
-            "/register", data={"email": email, "password": password, "confirm": password}
-        )
-    def login(self, email="tester1@email.com", password="passtest"):
-        return self._client.post(
-            "/login", data={"email": email, "password": password}
-        )
-    def logout(self):
-        return self._client.get("/logout")
-
-@pytest.fixture
-def auth(client):
-    return AuthActions(client)
-
-
-"""
-@pytest.fixture()
-def add_user(application):
-    with application.app_context():
-        #new record
-        user = User('test@email.com', 'tester')
-        db.session.add(user)
-        db.session.commit()
-"""

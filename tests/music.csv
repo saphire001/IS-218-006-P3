@@ -1,5 +1,5 @@
-Name,Artist ,Composer,Album,Genre,Size,Time,Disc Number,Disc Count,Track Count,Year,Date Modified,Date Added,Bit Rate,Sample Rate,Volume Adjustment,Kind,Equalizer,Comments,Plays,Last Played,Skips,Last Skipped,My Rating,Location
-N1,Ar1,C1,A1,Pop,7349034,392,1,1,1,2005,3/2/14 2:21 PM,3/2/14 2:21 PM,123,2149,,gfgald,,,294,2/12/21 3:05 PM,6,12/4/20 4:32 AM,,
-N2,Ar2,C2,A2,K-pop,4239853,433,2,2,2,2022,2/25/22 3:00 AM,2/25/22 3:00 AM,241,2352,,amdgjd,,,304,4/20/22 2:04 AM,2,3/5/22 12:00 AM,,
-N3,Ar3,C3,A3,Rap,5343543,425,3,3,3,2016,4/21/17 4:45 PM,4/21/17 4:45 PM,235,2043,,djfgdw,,,301,1/30/19 3:00 PM,5,10/12/18 2:00 PM,,
-N4 ,Ar4,C4,A4,Pop,3892394,342,4,4,4,2010,3/1/12 10:00 AM,3/1/12 10:00 AM,132,2142,,dkjfsk,,,343,1/8/20 7:00 AM,3,5/15/19 10:45 PM,,
+Name,Artist,Composer,Album,Grouping,Work,Movement Number,Movement Count,Movement Name,Genre,Size,Time,Disc Number,Disc Count,Track Number,Track Count,Year,Date Modified,Date Added,Bit Rate,Sample Rate,Volume Adjustment,Kind,Equalizer,Comments,Plays,Last Played,Skips,Last Skipped,My Rating,Location
+T1,Ar1,jfzkdj,A1,,,,,,Pop,3484242,495,1,1,5,15,2008,2/14/13 4:12 PM,2/14/13 4:12 PM,256,3432,,sdgfksd,,,323,4/23/22 4:21 AM,10,2/21/22 5:23 PM,,
+T2,Ar2,djfhdd,A2,,,,,,K-pop,"",342,2,2,6,14,2017,4/25/20 6:43 AM,4/25/20 6:43 AM,231,1342,,fgkdjfk,,,532,4/15/22 3:23 PM,3,3/23/22 7:23 AM,,
+T3,Ar3,jfhvkz,A3,,,,,,Rap,5743545,643,3,3,2,16,2021,5/12/21 12:00 PM,5/12/21 12:00 PM,342,5325,,dfasdjf,,,231,5/23/22 6:44 AM,6,4/30/22 9:00 PM,,
+T4,Ar4,kfkdsj,A4,,,,,,K-pop,4352346,234,4,2,3,17,2019,6/23/20 9:00 AM,6/23/20 9:00 AM,123,4634,,djkgkds,,,643,5/12/22 5:35 PM,7,3/28/22 8:23 AM,,
