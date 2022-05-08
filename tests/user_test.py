@@ -1,12 +1,8 @@
 import logging
-import pytest
 
-from flask_login import login_user
-from flask.testing import FlaskClient
-
-from app import db, auth
+from app import db
 from app.db.models import User, Song
-from faker import Faker
+from app.auth.forms import *
 
 def test_adding_user(application):
     log = logging.getLogger("myApp")
@@ -54,8 +50,12 @@ def test_adding_user(application):
             response = client.get("/login")
             assert response.status_code == 200
 
-    def test_register(application):
-        print("IDK")
+    def test_register(application,client):
+        form = register_form()
+        form.email.data = "keith@webizly.com"
+        form.password.data = "testtest"
+        form.confirm.data = "testtest"
+        assert form.validate()
 
     def test_login_dashboard(client):
         with client:
